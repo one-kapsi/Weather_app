@@ -1,11 +1,15 @@
 import os
-
+import argparse
 import requests
 from dotenv import load_dotenv
 load_dotenv()
 api_key = os.getenv("WEATHER_API_KEY")
 
-city = "Cracow"
+parser = argparse.ArgumentParser()
+parser.add_argument("-c", "--city", help="Enter City name to get weather for today - by default it is 'Cracow'", default="Cracow")
+args = parser.parse_args()
+
+city = args.city
 url = f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{city}?unitGroup=metric&key={api_key}&contentType=json"
 
 print(f"Getting weather data for {city}")
