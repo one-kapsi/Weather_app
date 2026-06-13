@@ -1,6 +1,6 @@
 # Weather App with Redis Cache and integration with API
 
-This app idea is taken from the roadmap.sh page and is written in **Python**
+This app idea is taken from the roadmap.sh page and is written in **Python** (https://roadmap.sh/projects/weather-api-wrapper-service
 
 Basically I have created a CLI weather app that will fetch the city from the user input (using argparse method) and then will display temperature & feels like temp for the given city. 
 The application integrates with Visual Crossing Weather API. The output is stored locally using **Redis** running inside a **Docker** container. The expiry time in the DB is set for 5 minutes (mostly for testing) 
